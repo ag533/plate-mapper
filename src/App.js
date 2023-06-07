@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Tooltip from "./WellsHelper";
 import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
-import { findAllByTestId } from "@testing-library/react";
 
 function App() {
   const [file, setFile] = useState();
