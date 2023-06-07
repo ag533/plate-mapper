@@ -111,21 +111,44 @@ function App() {
       <div style={{ textAlign: "center" }}>
         {upload && (
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <button
-              className="button"
-              onClick={(e) => {
-                handleCaptureClick(e);
-              }}
+            <Tooltip
+              content="Save your table/pallet into a png file"
+              direction="right"
             >
-              Save Configuration
-            </button>
+              <button
+                className="button"
+                onClick={(e) => {
+                  handleCaptureClick(e);
+                }}
+              >
+                Save Configuration
+              </button>
+            </Tooltip>
+            <div>
+              <h1>* Your CSV have been converted in a virtual plate *</h1>
+              <h3>
+                1. Hover over the wells to see the adjcent sample and fill
+                accordingly
+              </h3>
+              <h3>
+                2. A samples index table has also been provided below with
+                localtion of each subsatnce.
+              </h3>
+              <h3>
+                3. You can download this plate in an image file by clicking on
+                save configuration button
+              </h3>
+              <h3>
+                4. To rerun a different set please use the Rrrendeer button.
+              </h3>
+            </div>
             <button
               className="button"
               onClick={(e) => {
                 handleRerenderClick(e);
               }}
             >
-              <span>Rerender/ Upload new set</span>
+              Rerender/ Upload new set
             </button>
           </div>
         )}
