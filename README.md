@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Running the App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is deployed at : https://ag533.github.io/plate-mapper/
+If you want to intstall this locally (prereqiisit install node and npm):
 
-## Available Scripts
+1. Downlaod the code from the repository to you system.
+2. Run `npm install`.
+3. Run `npm start`.
+4. Open `localhost:3000` in you browser to access the app.
 
-In the project directory, you can run:
+## Implementation Steps breakdown
 
-### `npm start`
+We need following things to solve the problem presented.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Create a CSV uploader.
+2. Create a virtual plate.
+3. Fill the data from CSV into the plate.
+4. Show info to print of the user wants to print (Extra Thought)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Thought process.
 
-### `npm test`
+1. I started this issue by thinking how can I show a plate from the video on a computer screen. So I created a grid which will be 12x8 size.
+2. Then I moved on how to get the CSV data from the file onto the app.
+3. The next step was to assign different color to each element as it will be interesting of a scientist rather tha looking at a black and white screen.
+4. Then I created hovero over for the wells so that the scientist can view which sample to enter in which well.
+5. Then I though that what if they want to download this layout and pass it on.
+6. So I cearted an index table with sample name, location and color. So that they can also keep a records of this as the functionality to save a model on server is not easy to crete in 3 hours.
+7. What if they want to re run wiht different CSV so I added a button for that too.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Improvements:
 
-### `npm run build`
+1. Testing environemt or this project along with unit and e2e tests.
+2. The color pallete can also be tweeked (I had no idea what the color pallete breifly.bio has so I selected random colors that went ok according to me.)
+3. The image saving code is having some issues of the table and spreading the color that can be fixed too.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+More features for the future:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Online editing. (We can edit inndividual wells and that will update the table accordingly.)
+2. Online plate creation. (We can provide an empty plate to be filled and that will also assign the colors automatically and create table simultaneiously.)
+3. State saving for multiple accounts. (We can save state of a plate so that a person can visit it later and change/ fill whenever they feel like.)
+4. Footnotes for every well or info about handling the chemicals.
+5. Plate sharing so that they can send this to someone else on our platform too.
